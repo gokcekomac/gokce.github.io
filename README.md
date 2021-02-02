@@ -1,1 +1,2 @@
-# gokcekomac.github.io
+# Gökçe Komaç | Game Designer + Programmer
+
