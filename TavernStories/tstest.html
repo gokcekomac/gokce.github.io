@@ -16,14 +16,10 @@
 }
 tw-sidebar tw-icon.undo {
 	display: none;
-}
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="594,23" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Logo.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern stories intro&quot;&gt;
 
-<audio src="the URL of your sound effect" autoplay></style><script role="script" id="twine-user-script" type="text/twine-javascript">
-
-</script><tw-passagedata pid="1" name="Start" tags="" position="593,24" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Logo.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern stories intro&quot;&gt;
-
-
-[[Play|intro]]
+{(if: $replay is 1)[ [[Play again|intro]] | [[Reset progress|Reset]] ]
+(else:)[ [[Play|intro]] ]}
 
 [[Credits]]
 
@@ -46,15 +42,6 @@ tw-sidebar tw-icon.undo {
 }
 
 
-
-
-
-
-
-
-
-
-
 </tw-passagedata><tw-passagedata pid="2" name="cus3_1" tags="" position="1324,386" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-Turuncu.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 A patron sits at the bar and asks for a mead.
@@ -70,20 +57,16 @@ She looks like a quiet type.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/kap_sesi.mp3&#39;;
-audio.play();
+sfx_door = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="cus3end" tags="" position="1599,717" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 She seems thoughtful. You decide not to interrupt her. She finishes her drink and leaves.
 
 [[Next|endofday]]
-&lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
-&lt;/script&gt;
 
+&lt;script&gt;
+sfx_gold = 1;
+&lt;/script&gt;
 
 
 
@@ -103,7 +86,7 @@ You respond, &#39;Bet you’re still good at it.&#39;
 
 (set: $listen to $listen+1)
 
-</tw-passagedata><tw-passagedata pid="5" name="intro" tags="" position="371,196" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="intro" tags="" position="371,194" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
 
 It&#39;s a nice and quiet day at the tavern.
 
@@ -111,19 +94,13 @@ As the tavernkeeper, you are ready to greet the patrons.
 
 [[Next|cus1_1]]
 
+&lt;!--Soundstate Config--!&gt;
+(if: $music is 0)[(set: $music to 1)]
 
-(if: $music is 0)[
-&lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/middle2.mp3&#39;;
-audio.loop = true;
-audio.play();
-&lt;/script&gt;
-(set: $music to 1)
-]
-</tw-passagedata><tw-passagedata pid="6" name="Credits" tags="" position="791,195" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories.png&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;logo&quot;&gt;&lt;font size=4&gt;&lt;br&gt;&lt;b&gt;Zeren Doğan&lt;/b&gt; | Artwork
 
-&lt;b&gt;Gökçe Komaç&lt;/b&gt; | Project Lead, Game Design, Writing and Narrative Design, Coding, QA
+</tw-passagedata><tw-passagedata pid="6" name="Credits" tags="" position="714,187" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories2.png&quot; width=&quot;256&quot; height=&quot;192&quot; alt=&quot;logo&quot;&gt;&lt;font size=4&gt;&lt;br&gt;&lt;b&gt;Zeren Doğan&lt;/b&gt; | Artwork
+
+&lt;b&gt;Gökçe Komaç&lt;/b&gt; | Project Lead, Game Design, Writing and Narrative Design, Coding, Testing
 
 &lt;b&gt;Barış Yaman&lt;/b&gt; | Music, Sound Effects&lt;/font&gt;
 
@@ -143,9 +120,7 @@ You make a guess.
  
 [[Beer|cus1_2bm]] | [[Wine|cus1_2]] | [[Mead|cus1_2bm]]
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/kap_sesi.mp3&#39;;
-audio.play();
+sfx_door =1;
 &lt;/script&gt;
 (click: &quot;Wine&quot;)[(set: $guess to &quot;wine&quot;)]
 (click: &quot;Beer&quot;)[(set: $guess to &quot;beer&quot;)]
@@ -162,17 +137,14 @@ audio.play();
 [[Next|endgame]]
 
 
-</tw-passagedata><tw-passagedata pid="9" name="endgame" tags="" position="2014,674" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories.png&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;logo&quot;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="endgame" tags="" position="2014,674" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories2.png&quot; width=&quot;256&quot; height=&quot;192&quot; alt=&quot;logo&quot;&gt;
 { &lt;!--(set: $game to &quot;no&quot;)--!&gt;
 (if: $game is &quot;no&quot;)[(display: &quot;endgame_not_game&quot;) ]
 (else:)[(display: &quot;endgame_game&quot;)]
 }
 
 [[Back to menu|Start]]
-(set: $replay to 1)
-
-
-</tw-passagedata><tw-passagedata pid="10" name="cus1_2bm" tags="" position="385,497" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+(set: $replay to 1)</tw-passagedata><tw-passagedata pid="10" name="cus1_2bm" tags="" position="385,497" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 
 You serve her (print: $guess).
@@ -199,22 +171,16 @@ She takes a sip. ‘Ah, yes, just as I like it,’ she says. ‘Good guess’.
 [[Next|cus1_3]]
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
-&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="12" name="cus1_2bm2" tags="" position="392,647" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+sfx_drink =1;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="12" name="cus1_2bm2" tags="" position="392,647" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 She takes a sip. ‘Ah, yes, just as I like it’ she says.
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
+sfx_drink =1;
 &lt;/script&gt;
 
 [[Next|cus1_3]]
-
 
 </tw-passagedata><tw-passagedata pid="13" name="cus1_3" tags="" position="151,688" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
@@ -251,11 +217,8 @@ She soon gives up and leaves.
 
 [[Next|cus2_1]]
 
-
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
+sfx_gold = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="cus2_1" tags="" position="802,362" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 You see another patron entering the tavern. He approaches the bar and orders a beer. 
@@ -265,15 +228,14 @@ As you serve him his beer, you notice that he avoids eye contact. He seems to be
 [[stay around him|cus2_2]] | [[move away|cus2end3]]
 
 
-
-
+{
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/kap_sesi.mp3&#39;;
-audio.play();
+sfx_door = 1;
 &lt;/script&gt;
+
 (set: $gold to $gold+$beer)
-(set: $drink to $drink+1)</tw-passagedata><tw-passagedata pid="17" name="cus1_7" tags="" position="84,1329" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+(set: $drink to $drink+1)
+}</tw-passagedata><tw-passagedata pid="17" name="cus1_7" tags="" position="84,1329" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 She continues, ‘At first, it was very difficult to adjust to my new life, a life without them. When you are used to being treated like shit for so long, happiness becomes an alien feeling.&#39;
 
@@ -286,9 +248,7 @@ She continues, ‘At first, it was very difficult to adjust to my new life, a li
 
 
 
-</tw-passagedata><tw-passagedata pid="18" name="cus1end2" tags="" position="418,1569" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
-
-(if: $magic is &quot;yes&quot;)[‘Yes, I believe in magic’, you say.](else:)[‘No, I don’t believe in magic’, you say.]
+</tw-passagedata><tw-passagedata pid="18" name="cus1end2" tags="" position="429,1592" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 ‘Good to know. Well, I should get going. But it was really nice to talk to you! So, I’ll see you around then!’ 
 
@@ -300,9 +260,7 @@ And she leaves.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
+sfx_gold = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="19" name="cus2_2" tags="" position="755,552" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 When he finally can shake it off, he looks at you straight in the eye and asks, ‘Why did she do that? Why? Why did she just leave? Go. Vanish.’
@@ -324,9 +282,7 @@ He drinks his beer and leaves the tavern quietly.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
+sfx_gold = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="21" name="cus2_3" tags="" position="708,694" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘We did everything together. I remember it all as clear as yesterday. The memories of these precious moments linger… And the absence of what we once shared hurts. Profoundly.’
@@ -341,13 +297,12 @@ He takes a sip.
 
 [[Next|cus2_4]]
 
+
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
+sfx_drink = 1;
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="22" name="cus2end1" tags="" position="784,1361" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="22" name="cus2end1" tags="" position="771,1364" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Yeah, I’ll think about that.’ he says and takes another sip.
 
@@ -358,11 +313,8 @@ He takes the last sip and leaves.
 
 [[Next|cus3_1]] 
 
-
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
+sfx_gold = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="23" name="cus2_6letgo" tags="" position="760,1150" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘I’d let it go. It’s too much of a hassle and not worth my time and energy. And besides, if she doesn’t want to be found, I’d respect her decision’ you say.
@@ -434,7 +386,7 @@ She hands you something.
 She asks, ‘Do you believe in magic?’
 
 (set: $item to 1)
-[[Yes|cus1end2]] | [[No|cus1end2]]
+[[Yes|cus1_10]] | [[No|cus1_10]]
 
 (click: &quot;Yes&quot;)[(set: $magic to &quot;yes&quot;)]
 (click: &quot;No&quot;)[(set: $magic to &quot;no&quot;)]
@@ -451,9 +403,7 @@ And she leaves.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
+sfx_gold = 1;
 &lt;/script&gt;</tw-passagedata><tw-passagedata pid="30" name="cus2_4" tags="" position="686,820" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 He sighs and continues.
@@ -480,11 +430,8 @@ He takes another sip. A big one.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
-&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="32" name="cus2_7" tags="" position="560,1287" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+sfx_drink = 1;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="32" name="cus2_7" tags="" position="570,1345" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Yeah, I’ll think about that.’ he says and takes another sip.
 
@@ -494,6 +441,8 @@ He doesn’t seem to be lost in his thoughts anymore. He takes the last sip.
 
 ‘I can offer you mulled wine. It’s a recent addition to the menu.’
 
+He agrees and moves to a table to enjoy his drink.
+
 {(set: $gold to $gold+$mulledwine)
 (set: $drink to $drink+1)}
 
@@ -501,24 +450,9 @@ He doesn’t seem to be lost in his thoughts anymore. He takes the last sip.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
+sfx_drink = 1;
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="33" name="cus2_8" tags="" position="562,1414" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
-
-He agrees and moves to a table to enjoy his drink.
-
-After finishing his drink, you think he’s about to leave, but...
-
-[[Next|cus2_9]]
-
-
-&lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/para3.mp3&#39;;
-audio.play();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="34" name="cus2_9" tags="" position="565,1556" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="33" name="cus2_9" tags="" position="566,1634" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 He suddenly changes direction and comes towards you.
 
@@ -526,16 +460,14 @@ He suddenly changes direction and comes towards you.
 
 ‘Ask away.’ you say.
 
-‘Okay then, I’ll be straightforward. You are kinda my type, and, uh, I was wondering if you’d like to go on a date with me.’
-
-[[Yes|cus2end2y]] | [[No|cus2end2n]]
+[[Next|cus2_10]]
 
 
 
 
 
 
-</tw-passagedata><tw-passagedata pid="35" name="cus2end2y" tags="" position="829,1574" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="cus2end2y" tags="" position="817,1629" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 (set: $date to 1)
 ‘Thought you would never ask!’ you say and give him your phone number.
 
@@ -550,7 +482,7 @@ He leaves.
 
 
 
-</tw-passagedata><tw-passagedata pid="36" name="cus2end2n" tags="" position="961,1574" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="35" name="cus2end2n" tags="" position="939,1712" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘No, I don’t think so. But thanks, I’m flattered!’ you say.
 
@@ -562,7 +494,7 @@ He leaves.
 
 [[Next|cus3_1]] 
 
-</tw-passagedata><tw-passagedata pid="37" name="Untitled Passage" tags="" position="2436,599.5" size="100,100">(set: $a to 5, $b to 2)(set: $c to $a+$b)
+</tw-passagedata><tw-passagedata pid="36" name="Untitled Passage" tags="" position="2436,599.5" size="100,100">(set: $a to 5, $b to 2)(set: $c to $a+$b)
 
 C is (print: $c)
 
@@ -572,7 +504,7 @@ C is (print: $c)
 
 (set: $c to $c+$b)
 
-C is (print: $c)</tw-passagedata><tw-passagedata pid="38" name="cus3_3" tags="" position="1296,675" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+C is (print: $c)</tw-passagedata><tw-passagedata pid="37" name="cus3_3" tags="" position="1296,675" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 The game developer takes a sip from her mead and continues her rant.
 
@@ -583,11 +515,9 @@ The game developer takes a sip from her mead and continues her rant.
 
 
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
+sfx_drink = 1;
 &lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="39" name="cus3_4y" tags="" position="1227,821" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="cus3_4y" tags="" position="1227,821" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 ‘Yes, it’s still a game’ you say.
 
@@ -599,7 +529,7 @@ audio.play();
 
 
 
-</tw-passagedata><tw-passagedata pid="40" name="cus3_4n" tags="" position="1341,820" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+</tw-passagedata><tw-passagedata pid="39" name="cus3_4n" tags="" position="1341,820" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 ‘No, it’s not a game anymore’ you say.
 
@@ -609,7 +539,7 @@ audio.play();
 [[Next|cus3_5]]
 
 
-</tw-passagedata><tw-passagedata pid="41" name="cus3_5" tags="" position="1276,1048" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="cus3_5" tags="" position="1276,1048" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 The game developer takes another sip. She continues her speech.
 
@@ -631,15 +561,14 @@ You can’t believe you just said that. Luckily, she does not hear it, or at lea
 (set: $drink to $drink+1)}
 
 [[Tell about yourself|cus3_6]] | [[stay silent|cus3end]]
+
+
 &lt;script&gt;
-var audio = document.createElement(&#39;audio&#39;);
-audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-audio.play();
+sfx_drink = 1;
 &lt;/script&gt;
 
 
-
-</tw-passagedata><tw-passagedata pid="42" name="cus3_6" tags="" position="1263,1218" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="cus3_6" tags="" position="1263,1220" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 You start talking about yourself.
 
@@ -654,7 +583,7 @@ You pause for a second and gaze around at your tavern proudly. Then you continue
 
 
 
-</tw-passagedata><tw-passagedata pid="43" name="cus3_7" tags="" position="1320,1379" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="cus3_7" tags="" position="1320,1386" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 ‘But I’m glad you’re chasing your dreams. And, I don’t think you’ve lost your muse. Maybe, they’re just hibernating? Or going for a walk to clear their thoughts? Or at a tavern enjoying their mead?’
 
@@ -668,34 +597,26 @@ The game developer raises an eyebrow.
 [[Next|cus3end]] 
 
 
-</tw-passagedata><tw-passagedata pid="44" name="goodlistener" tags="" position="1814,792" size="100,100">As you clean up and get ready to head back home, you think about your day and the stories you listened to.
+</tw-passagedata><tw-passagedata pid="43" name="goodlistener" tags="" position="1814,792" size="100,100">As you clean up and get ready to head back home, you think about your day and the stories you listened to.
 
 Patrons often find it easy to open up to a stranger like you, and you generously offer what is best to offer someone who needs to rant, brag or just be heard. You haven’t always been the best mentor, but you are a good listener.
 
 You’ve come across myriad stories throughout the years of tavernkeeping, and within these stories you hear, you have found things that resonate with you. It feels like being on a journey; you progress with each and every story you hear. Taking advantage of this journey, you discover novel meanings and perspectives in your experiences.
 
 You know you wouldn’t be advancing this much if you covered your ears to the stories. The thought of this accomplishment feels rewarding.
-</tw-passagedata><tw-passagedata pid="45" name="okaylistener" tags="" position="1817,902" size="100,100">As you clean up and get ready to head back home, you think about your day, the stories you listened to and those you &lt;i&gt;could have&lt;/i&gt; listened to.
+</tw-passagedata><tw-passagedata pid="44" name="okaylistener" tags="" position="1817,902" size="100,100">As you clean up and get ready to head back home, you think about your day, the stories you listened to and those you &lt;i&gt;could have&lt;/i&gt; listened to.
 
 You haven’t always been the best mentor, and definitely not the best listener per se. But that’s how you roll and it hasn’t failed you so far. 
 
 But sometimes, you can’t help but wonder how different it could’ve been if only you chose to listen to &lt;i&gt;all&lt;/i&gt; of the stories.
-</tw-passagedata><tw-passagedata pid="46" name="badlistener" tags="" position="1820,1014" size="100,100">As you clean up and get ready to head back home, you think about your day and the stories you could have listened to.
+</tw-passagedata><tw-passagedata pid="45" name="badlistener" tags="" position="1820,1014" size="100,100">As you clean up and get ready to head back home, you think about your day and the stories you could have listened to.
 
 You’re not much of a people person, anyway, you have never been. You hate small talk and you’re definitely not interested in other people’s drama.
 
 The choice is yours and only yours to make, and you choose to mind your own business.
 
 But sometimes, you can’t help but wonder how different it could’ve been if only you chose to listen to the patrons’ stories.
-</tw-passagedata><tw-passagedata pid="47" name="endgame_data" tags="" position="2434,478" size="100,100">Guess: (print: $guess)
-Magic: (print: $magic)
-Date: (print: $date)
-Gold: (print: $gold)
-Game: (print: $game)
-Listen: (print: $listen)
-Storyteller: (print: $storyteller)
-Drink: (print: $drink)
-Problemsolver: (print: $problemsolver)</tw-passagedata><tw-passagedata pid="48" name="endgame_game" tags="" position="2015,788" size="100,100">Tavern Stories, a game about losing and finding. 
+</tw-passagedata><tw-passagedata pid="46" name="endgame_game" tags="" position="2015,788" size="100,100">Tavern Stories, a game about losing and finding. 
 
 Thank you for playing!
 
@@ -703,7 +624,7 @@ Thank you for playing!
 (display: &quot;endgame_stats&quot;)
 
 (display: &quot;endgame_achievements&quot;)
-------------</tw-passagedata><tw-passagedata pid="49" name="endgame_not_game" tags="" position="2131,789" size="100,100">Tavern Stories, an &lt;b&gt;interactive story&lt;/b&gt; about losing and finding. 
+------------</tw-passagedata><tw-passagedata pid="47" name="endgame_not_game" tags="" position="2131,789" size="100,100">Tavern Stories, an &lt;b&gt;interactive novel&lt;/b&gt; about losing and finding. 
 
 Thank you for reading.
 
@@ -720,13 +641,13 @@ Dates arranged: ???
 
 (Achievements and Stats are not displayed because you selected “No, it’s not a game anymore”.)&lt;/font&gt;
 {(display: &quot;check_achievements&quot;)}
-------</tw-passagedata><tw-passagedata pid="50" name="endgame_stats" tags="" position="2017,903" size="100,100">&lt;font size=4&gt;&lt;b&gt;- Stats (Current Playthrough) -&lt;/b&gt;
+------</tw-passagedata><tw-passagedata pid="48" name="endgame_stats" tags="" position="2017,903" size="100,100">&lt;font size=4&gt;&lt;b&gt;- Stats (Current Playthrough) -&lt;/b&gt;
 Drinks served: (print: $drink)/5
 Gold earned: (print: $gold)
 Items collected: (print: $item)/1
-Dates arranged: (print: $date)/1{&lt;/font&gt;}</tw-passagedata><tw-passagedata pid="51" name="endgame_achievements" tags="" position="2015,1018" size="100,100">{(display: &quot;check_achievements&quot;)}&lt;font size=4&gt;&lt;b&gt;- Achievements –
+Dates arranged: (print: $date)/1{&lt;/font&gt;}</tw-passagedata><tw-passagedata pid="49" name="endgame_achievements" tags="" position="2015,1018" size="100,100">{(display: &quot;check_achievements&quot;)}&lt;font size=4&gt;&lt;b&gt;- Achievements –
 Unlocked ((print: $unlocked)/9):&lt;/b&gt;
-(print: $display_ach )&lt;/font&gt;</tw-passagedata><tw-passagedata pid="52" name="check_achievements" tags="" position="2133,1019" size="100,100">{
+(print: $display_ach )&lt;/font&gt;</tw-passagedata><tw-passagedata pid="50" name="check_achievements" tags="" position="2133,1019" size="100,100">{
 (set: $display_ach to &quot;&quot;)
 &lt;!-- 
 ACHIEVEMENT ENUM
@@ -807,15 +728,15 @@ ACHIEVEMENT ENUM
 	(set: $display_ach to $display_ach + ((passage: &quot;ach09&quot;)&#39;s source))
 ]
 (set: $display_ach to $display_ach + &quot;&lt;font size=2&gt;&lt;br&gt;(! = Unlocked in the current playthrough)&lt;/font&gt;&quot;)
-}</tw-passagedata><tw-passagedata pid="53" name="ach01" tags="" position="2014,1149" size="100,100">&lt;b&gt;Remember, wine!:&lt;/b&gt; Guessed the usual of the first patron correctly.
-</tw-passagedata><tw-passagedata pid="54" name="ach02" tags="" position="2125,1146.5" size="100,100">&lt;b&gt;What was it, again?:&lt;/b&gt; Couldn’t guess the usual of the first patron correctly.
-</tw-passagedata><tw-passagedata pid="55" name="ach03" tags="" position="2237,1143.5" size="100,100">&lt;b&gt;Good listener:&lt;/b&gt; Listened to everything that patrons have to say.
-</tw-passagedata><tw-passagedata pid="56" name="ach04" tags="" position="2348,1145.5" size="100,100">&lt;b&gt;Bad listener:&lt;/b&gt; Listened to nothing that patrons have to say.
-</tw-passagedata><tw-passagedata pid="57" name="ach05" tags="" position="2016,1264.5" size="100,100">&lt;b&gt;Okay listener:&lt;/b&gt; Listened to some of the things that patrons have to say.
-</tw-passagedata><tw-passagedata pid="58" name="ach06" tags="" position="2127,1264.5" size="100,100">&lt;b&gt;Storyteller:&lt;/b&gt; Told your own story to the game developer.
-</tw-passagedata><tw-passagedata pid="59" name="ach07" tags="" position="2240,1261.5" size="100,100">&lt;b&gt;Problemsolver:&lt;/b&gt; Encouraged a patron to get in touch with his childhood friend.
-</tw-passagedata><tw-passagedata pid="60" name="ach08" tags="" position="2351,1262.5" size="100,100">&lt;b&gt;Magical:&lt;/b&gt; Told the first patron that you believe in magic.
-</tw-passagedata><tw-passagedata pid="61" name="Untitled Passage 1" tags="" position="2550,478.5" size="100,100">Olustu (set: $display_ach to &quot;&quot;)
+}</tw-passagedata><tw-passagedata pid="51" name="ach01" tags="" position="2014,1149" size="100,100">&lt;b&gt;Remember, wine!:&lt;/b&gt; Guessed the usual of the first patron correctly.
+</tw-passagedata><tw-passagedata pid="52" name="ach02" tags="" position="2125,1146.5" size="100,100">&lt;b&gt;What was it, again?:&lt;/b&gt; Couldn’t guess the usual of the first patron correctly.
+</tw-passagedata><tw-passagedata pid="53" name="ach03" tags="" position="2237,1143.5" size="100,100">&lt;b&gt;Good listener:&lt;/b&gt; Listened to everything that patrons have to say.
+</tw-passagedata><tw-passagedata pid="54" name="ach04" tags="" position="2348,1145.5" size="100,100">&lt;b&gt;Bad listener:&lt;/b&gt; Listened to nothing that patrons have to say.
+</tw-passagedata><tw-passagedata pid="55" name="ach05" tags="" position="2016,1264.5" size="100,100">&lt;b&gt;Okay listener:&lt;/b&gt; Listened to some of the things that patrons have to say.
+</tw-passagedata><tw-passagedata pid="56" name="ach06" tags="" position="2127,1264.5" size="100,100">&lt;b&gt;Storyteller:&lt;/b&gt; Told your own story to the game developer.
+</tw-passagedata><tw-passagedata pid="57" name="ach07" tags="" position="2240,1261.5" size="100,100">&lt;b&gt;Problemsolver:&lt;/b&gt; Encouraged a patron to get in touch with his childhood friend.
+</tw-passagedata><tw-passagedata pid="58" name="ach08" tags="" position="2351,1262.5" size="100,100">&lt;b&gt;Magical:&lt;/b&gt; Told the first patron that you believe in magic.
+</tw-passagedata><tw-passagedata pid="59" name="Untitled Passage 1" tags="" position="2550,478.5" size="100,100">Olustu (set: $display_ach to &quot;&quot;)
 
 
 (set: $display_ach to $display_ach + &quot;[NEW] &quot;)
@@ -827,11 +748,20 @@ ACHIEVEMENT ENUM
 	
 	Print ediliyor:
 	
-	(print: $display_ach)</tw-passagedata><tw-passagedata pid="62" name="About" tags="" position="572,188" size="100,100">...We&#39;re still working on this section... 
+	(print: $display_ach)</tw-passagedata><tw-passagedata pid="60" name="About" tags="" position="573,189" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories2.png&quot; width=&quot;256&quot; height=&quot;192&quot; alt=&quot;logo&quot;&gt;
+
+&lt;h4&gt;A game about losing and finding&lt;/h4&gt;{
+}&lt;font size=4&gt;&lt;br&gt;Tavern Stories was originally developed in 48 hours, during Global Game Jam 2021, for the theme “lost and found”.  Later, we [[updated|update_log]] the content and published this current version of the game. The older version of Tavern Stories can be played &lt;a href=&quot;https://gokcekomac.github.io/TavernStories/ggj.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; (opens in a new tab).&lt;br&gt;&lt;/font&gt;
+
+&lt;h4&gt;We are curious!&lt;/h4&gt;{
+}&lt;font size=4&gt;&lt;br&gt;Please let us know what you think about our game! It only takes &lt;b&gt;20 seconds&lt;/b&gt; to fill in &lt;a href=&quot;https://forms.gle/MJb7Hz3Wc7rTG9Gk6&quot; target=&quot;_blank&quot;&gt;this feedback form&lt;/a&gt; (opens in a new tab).&lt;/font&gt;
 
 
 [[Back to main menu|Start]]
-</tw-passagedata><tw-passagedata pid="63" name="ach09" tags="" position="2017,1380" size="100,100">&lt;b&gt;Bookworm:&lt;/b&gt; Selected “No, it’s not a game anymore”.</tw-passagedata><tw-passagedata pid="64" name="check_achi_yedek" tags="" position="2660,596" size="100,100">{
+
+
+
+</tw-passagedata><tw-passagedata pid="61" name="ach09" tags="" position="2017,1380" size="100,100">&lt;b&gt;Bookworm:&lt;/b&gt; Selected “No, it’s not a game anymore”.</tw-passagedata><tw-passagedata pid="62" name="check_achi_yedek" tags="" position="2662,602" size="100,100">{
 (set: $display_ach to &quot;&quot;)
 
 &lt;!-- 
@@ -929,9 +859,142 @@ ACHIEVEMENT ENUM
 ](else-if: $ach09 is 1)[
 	(set: $display_ach to $display_ach + ((passage: &quot;ach09&quot;)&#39;s source))
 ]
-}</tw-passagedata><tw-passagedata pid="65" name="Untitled Passage 2" tags="" position="2549,589.5" size="100,100">(set: $display_ach to &quot;&quot;)
+}</tw-passagedata><tw-passagedata pid="63" name="Untitled Passage 2" tags="" position="2549,597.5" size="100,100">(set: $display_ach to &quot;&quot;)
 (set: $display_ach to $display_ach + &quot;* &quot; + (passage: &quot;ach04&quot;)&#39;s source)
-(print: $display_ach)</tw-passagedata></tw-storydata>
+(print: $display_ach)</tw-passagedata><tw-passagedata pid="64" name="soundconfig" tags="footer" position="206,31" size="100,100">{
+&lt;!-- MUSIC AND SOUND --!&gt;
+&lt;!-- 
+Sounds Enum
+0 = inactive
+1 = start
+2 = continuing
+--!&gt;
+&lt;!--Start playing the sounds--!&gt;
+(if: $music is 1)[
+	(set: $music to 2)
+  &lt;script&gt;
+
+  var music = document.createElement(&#39;audio&#39;);
+  music.src = &#39;music_sfx/middle2.mp3&#39;;
+  music.loop = true;
+  music.play();
+
+
+  var soundstate = &quot;ON&quot;;
+
+
+  var audio = document.createElement(&#39;audio&#39;);
+  var sfx_door = 0;
+  var sfx_drink = 0;
+  var sfx_gold = 0;
+  var sfx_magic = 0;
+
+  &lt;/script&gt;
+
+  
+]
+
+&lt;!--Toggle Sound On and Off--!&gt;
+(if: $music is 2)[
+--------------
+(align: &quot;====&gt;&quot;)[&lt;p style=&quot;font-size:12px;&quot; id=&quot;soundbutton&quot;&gt;&lt;/p&gt;]
+
+&lt;script&gt;
+document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [&quot; + soundstate +&quot;]&quot;;
+document.getElementById(&quot;soundbutton&quot;).addEventListener(&quot;click&quot;, soundStateChange);
+
+function soundStateChange() {
+	if(soundstate == &quot;ON&quot;)
+    {
+    	document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [OFF]&quot;;
+    	music.muted = true;
+		audio.muted = true;
+        soundstate = &quot;OFF&quot;;  
+    }
+    else
+    {
+        document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [ON]&quot;;
+    	music.muted = false;
+		audio.muted = false;
+        soundstate = &quot;ON&quot;;
+    }
+}
+
+if(sfx_door == 1)
+{ 
+	audio.src = &#39;music_sfx/kap_sesi.mp3&#39;;
+	audio.play();
+	sfx_door = 0;
+}
+else if(sfx_drink == 1)
+{ 
+	audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
+	audio.play();
+	sfx_drink = 0;
+}
+else if(sfx_gold == 1)
+{ 
+	audio.src = &#39;music_sfx/para3.mp3&#39;;
+	audio.play();
+	sfx_gold = 0;
+}
+else if(sfx_magic == 1)
+{ 
+	audio.src = &#39;&#39;;
+	audio.play();
+	sfx_magic = 0;
+}
+&lt;/script&gt;
+]
+}</tw-passagedata><tw-passagedata pid="65" name="cus1_10" tags="" position="284,1680" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+
+(if: $magic is &quot;yes&quot;)[‘Yes, I believe in magic’ you say.](else:)[‘No, I don’t believe in magic’ you say.]
+
+[[Next|cus1end2]]
+
+</tw-passagedata><tw-passagedata pid="66" name="cus2_10" tags="" position="568,1769" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+
+‘Okay then, I’ll be straightforward. You are kinda my type, and, uh, I was wondering if you’d like to go on a date with me.’
+
+[[Yes|cus2end2y]] | [[No|cus2end2n]]
+
+
+</tw-passagedata><tw-passagedata pid="67" name="cus2_8" tags="" position="567,1483" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
+After finishing his drink, you think he’s about to leave, but...
+
+[[Next|cus2_9]]
+
+
+&lt;script&gt;
+sfx_gold = 1;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="68" name="update_log" tags="" position="572,332" size="100,100">&lt;font size=2 face=&quot;courier&quot;&gt;Tavern Stories v2 Update Log:
+- music bug fixed
+- sound effects added
+- spellchecked and proofread
+- image size reduced for less scrolling
+- less text per page for less scrolling
+- enhanced the content
+- added achievements and stats
+- added button for turning off/on the sound
+- added about page and feedback form
+- added different narratives for the game endings
+&lt;/font&gt;
+[[Back|About]]
+
+
+</tw-passagedata><tw-passagedata pid="69" name="Reset" tags="" position="863,190" size="100,100">Are you sure you want to reset your progress?
+
+[[Yes, reset|Start]](click:&quot;Yes, reset&quot;)[(reload:)] | [[No, go back|Start]]
+
+
+
+
+
+
+
+
+
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,o=!1,i=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(o)throw i}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
