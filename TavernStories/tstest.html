@@ -744,7 +744,7 @@ Sounds Enum
   &lt;script&gt;
 
   var music = document.createElement(&#39;audio&#39;);
-  music.src = &#39;music_sfx/middle2.mp3&#39;;
+  music.src = &#39;music_sfx/Tavern_Stories.ogg&#39;;
   music.loop = true;
   music.play();
 
@@ -828,7 +828,7 @@ else if(sfx_gold == 1)
 }
 else if(sfx_magic == 1)
 { 
-	audio.src = &#39;&#39;;
+	audio.src = &#39;music_sfx/magic.mp3&#39;;
 	audio.play();
 	sfx_magic = 0;
 }
@@ -841,7 +841,11 @@ else if(sfx_magic == 1)
 
 [[Next|cus1end2]]
 
-</tw-passagedata><tw-passagedata pid="62" name="cus2_10" tags="" position="567,1769" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+{(if: $magic is &quot;yes&quot;)[
+&lt;script&gt;
+sfx_magic =1;
+&lt;/script&gt;
+]}</tw-passagedata><tw-passagedata pid="62" name="cus2_10" tags="" position="567,1769" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Okay then, I’ll be straightforward. You are kinda my type, and, uh, I was wondering if you’d like to go on a date with me.’
 
