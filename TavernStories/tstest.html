@@ -131,7 +131,7 @@ As the tavernkeeper, you are ready to greet the patrons.
 &lt;b&gt;Barış Yaman&lt;/b&gt; | Music, Sound Effects
 
 
-[[Back to main menu|Start]]
+[[Back to menu|Start]]
 
 
 </tw-passagedata><tw-passagedata pid="7" name="cus1_1" tags="" position="239,352" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
@@ -346,13 +346,12 @@ sfx_gold = 1;
 
 ‘I’d wait ‘till I find the right mindset to look for some answers.’ you say.
 
+{
 (set: $problemsolver to 1)
 (if: $guess is &quot;wine&quot; and $magic is &quot;yes&quot;)[
 [[Next|cus2_7]]
 ](else:)[ [[Next|cus2end1]] ]
-
-
-</tw-passagedata><tw-passagedata pid="25" name="cus1_6" tags="" position="84,1178" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="25" name="cus1_6" tags="" position="84,1178" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 ‘The day he dumped me was the day I resigned from my job. It was the day I was liberated, but at the same time, I was terrified. So terrified! Everything I’ve built my life around was destroyed within a split second... I usually like to plan my steps ahead but... Yeah, whatever. Things just go their own way, I guess.’
 
@@ -386,14 +385,10 @@ She pauses for a second and takes a sip. Then, clears her throat to continue.
 
 She doesn’t pay any attention to your answer. You wonder if her question was rhetorical.
 
-(if: $guess is &quot;wine&quot;)[
+{(if: $guess is &quot;wine&quot;)[
 [[Next|cus1_9]]
 ](else:)[ [[Next|cus1end1]] ]
-
-
-
-
-</tw-passagedata><tw-passagedata pid="28" name="cus1_9" tags="" position="108,1624" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="28" name="cus1_9" tags="" position="108,1624" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 She leans over and says, ‘Listen, it’s quite odd. When I walked in, I wasn’t thinking about doing this, but perhaps the things you said and things you did influenced me to give this to you.’
 
@@ -466,11 +461,9 @@ He agrees and moves to a table to enjoy his drink.
 
 [[Next|cus2_8]]
 
-
-&lt;script&gt;
+{&lt;script&gt;
 sfx_drink = 1;
-&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="33" name="cus2_9" tags="" position="566,1634" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+&lt;/script&gt;}</tw-passagedata><tw-passagedata pid="33" name="cus2_9" tags="" position="566,1634" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 He suddenly changes direction and comes towards you.
 
@@ -479,11 +472,6 @@ He suddenly changes direction and comes towards you.
 ‘Ask away.’ you say.
 
 [[Next|cus2_10]]
-
-
-
-
-
 
 </tw-passagedata><tw-passagedata pid="34" name="cus2end2y" tags="" position="816,1629" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 (set: $date to 1)
@@ -520,12 +508,9 @@ The game developer takes a sip from her mead and continues her rant.
 
 [[Yes, it’s still a game|cus3_4y]] | [[No, it’s not a game anymore|cus3_4n]]
 
-
-
 &lt;script&gt;
 sfx_drink = 1;
-&lt;/script&gt;
-</tw-passagedata><tw-passagedata pid="37" name="cus3_4y" tags="" position="1226,821" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="37" name="cus3_4y" tags="" position="1226,821" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
 ‘Yes, it’s still a game’ you say.
 
@@ -533,9 +518,6 @@ sfx_drink = 1;
 
 (set: $game to &quot;yes&quot;)
 [[Next|cus3_5]]
-
-
-
 
 </tw-passagedata><tw-passagedata pid="38" name="cus3_4n" tags="" position="1340,820" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
@@ -545,7 +527,6 @@ sfx_drink = 1;
 
 (set: $game to &quot;no&quot;)
 [[Next|cus3_5]]
-
 
 </tw-passagedata><tw-passagedata pid="39" name="cus3_5" tags="" position="1275,1048" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character1-turuncu-mead.jpg&quot; width=&quot;512&quot; height=&quot;384&quot;&gt;
 
@@ -564,8 +545,8 @@ You can’t believe you just said that. Luckily, she does not hear it, or at lea
 ‘Another one?’ you ask. She nods.
 
 &#39;Here you go, enjoy!’
-
-{(set: $gold to $gold+$mulledwine)
+{
+(set: $gold to $gold+$mulledwine)
 (set: $drink to $drink+1)}
 
 [[tell about yourself|cus3_6]] | [[stay silent|cus3end]]
@@ -745,7 +726,7 @@ ACHIEVEMENT ENUM
 }&lt;br&gt;Please let us know what you think about our game! It only takes &lt;b&gt;20 seconds&lt;/b&gt; to fill in &lt;a href=&quot;https://forms.gle/MJb7Hz3Wc7rTG9Gk6&quot; target=&quot;_blank&quot;&gt;this feedback form&lt;/a&gt; (opens in a new tab).
 
 
-[[Back to main menu|Start]]
+[[Back to menu|Start]]
 
 
 
