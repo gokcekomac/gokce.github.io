@@ -720,7 +720,7 @@ ACHIEVEMENT ENUM
 </tw-passagedata><tw-passagedata pid="58" name="About" tags="" position="572,189" size="100,100">&lt;img src=&quot;IMG/Logo-Tavernstories2.png&quot; width=&quot;141&quot; height=&quot;85&quot; alt=&quot;logo&quot;&gt;
 
 &lt;h3&gt;A game about losing and finding&lt;/h3&gt;{
-}&lt;br&gt;Tavern Stories was originally developed in 48 hours, during Global Game Jam 2021, for the theme “lost and found”.  Later, we [[updated|update_log]] the content and published this current version of the game. The older version of Tavern Stories can be played &lt;a href=&quot;https://gokcekomac.github.io/TavernStories/ggj.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; (opens in a new tab).&lt;br&gt;
+}&lt;br&gt;Tavern Stories was originally developed in 48 hours, during Global Game Jam 2021, for the theme “lost and found”, by our team, using &lt;a href=&quot;https://twinery.org/&quot; target=&quot;_blank&quot;&gt;Twine&lt;/a&gt; (opens in a new tab).  Later, we [[updated|update_log]] the content and published this current version of the game. The older version of Tavern Stories can be played &lt;a href=&quot;https://gokcekomac.github.io/TavernStories/ggj.html&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; (opens in a new tab).&lt;br&gt;
 
 &lt;h3&gt;We are curious!&lt;/h3&gt;{
 }&lt;br&gt;Please let us know what you think about our game! It only takes &lt;b&gt;20 seconds&lt;/b&gt; to fill in &lt;a href=&quot;https://forms.gle/MJb7Hz3Wc7rTG9Gk6&quot; target=&quot;_blank&quot;&gt;this feedback form&lt;/a&gt; (opens in a new tab).
@@ -744,7 +744,7 @@ Sounds Enum
   &lt;script&gt;
 
   var music = document.createElement(&#39;audio&#39;);
-  music.src = &#39;music_sfx/Tavern_Stories.ogg&#39;;
+  music.src = &#39;music_sfx/Tavern_Story_uzun.mp3&#39;;
   music.loop = true;
   music.play();
 
@@ -767,7 +767,7 @@ Sounds Enum
 (if: $music is 2)[
 --------------
 (align: &quot;====&gt;&quot;)[&lt;font size=&quot;2&quot;&gt;Music:&lt;/font&gt;
-&lt;span style=&quot;font-size:12px;&quot; id=&quot;musicbutton&quot;&gt;&lt;/span&gt;&lt;font size=&quot;2&quot;&gt;| Sound Effects: &lt;/font&gt;&lt;span style=&quot;font-size:12px;&quot; id=&quot;sfxbutton&quot;&gt;&lt;/span&gt;]
+&lt;span style=&quot;font-size:12px;&quot; id=&quot;musicbutton&quot; alt=&quot;Music&quot;&gt;&lt;/span&gt;&lt;font size=&quot;2&quot;&gt;| Sound Effects: &lt;/font&gt;&lt;span style=&quot;font-size:12px;&quot; id=&quot;sfxbutton&quot; alt=&quot;SoundEffects&quot;&gt;&lt;/span&gt;]
 
 &lt;script&gt;
 document.getElementById(&quot;musicbutton&quot;).innerHTML = &quot;[&quot; + musicstate +&quot;] &quot;;
@@ -888,92 +888,7 @@ sfx_gold = 1;
 
 
 
-</tw-passagedata><tw-passagedata pid="66" name="soundconfigbackup" tags="" position="106,42" size="100,100">{
-&lt;!-- MUSIC AND SOUND --!&gt;
-&lt;!-- 
-Sounds Enum
-0 = inactive
-1 = start
-2 = continuing
---!&gt;
-&lt;!--Start playing the sounds--!&gt;
-(if: $music is 1)[
-	(set: $music to 2)
-  &lt;script&gt;
-
-  var music = document.createElement(&#39;audio&#39;);
-  music.src = &#39;music_sfx/middle2.mp3&#39;;
-  music.loop = true;
-  music.play();
-
-
-  var soundstate = &quot;ON&quot;;
-
-
-  var audio = document.createElement(&#39;audio&#39;);
-  var sfx_door = 0;
-  var sfx_drink = 0;
-  var sfx_gold = 0;
-  var sfx_magic = 0;
-
-  &lt;/script&gt;
-
-  
-]
-
-&lt;!--Toggle Sound On and Off--!&gt;
-(if: $music is 2)[
---------------
-(align: &quot;====&gt;&quot;)[&lt;p style=&quot;font-size:12px;&quot; id=&quot;soundbutton&quot;&gt;&lt;/p&gt;]
-
-&lt;script&gt;
-document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [&quot; + soundstate +&quot;]&quot;;
-document.getElementById(&quot;soundbutton&quot;).addEventListener(&quot;click&quot;, soundStateChange);
-
-function soundStateChange() {
-	if(soundstate == &quot;ON&quot;)
-    {
-    	document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [OFF]&quot;;
-    	music.muted = true;
-		audio.muted = true;
-        soundstate = &quot;OFF&quot;;  
-    }
-    else
-    {
-        document.getElementById(&quot;soundbutton&quot;).innerHTML = &quot;Sound: [ON]&quot;;
-    	music.muted = false;
-		audio.muted = false;
-        soundstate = &quot;ON&quot;;
-    }
-}
-
-if(sfx_door == 1)
-{ 
-	audio.src = &#39;music_sfx/kap_sesi.mp3&#39;;
-	audio.play();
-	sfx_door = 0;
-}
-else if(sfx_drink == 1)
-{ 
-	audio.src = &#39;music_sfx/icmece_koymaca.mp3&#39;;
-	audio.play();
-	sfx_drink = 0;
-}
-else if(sfx_gold == 1)
-{ 
-	audio.src = &#39;music_sfx/para3.mp3&#39;;
-	audio.play();
-	sfx_gold = 0;
-}
-else if(sfx_magic == 1)
-{ 
-	audio.src = &#39;&#39;;
-	audio.play();
-	sfx_magic = 0;
-}
-&lt;/script&gt;
-]
-}</tw-passagedata><tw-passagedata pid="67" name="Achievements" tags="" position="1011,188" size="100,100">{
+</tw-passagedata><tw-passagedata pid="66" name="Achievements" tags="" position="1011,188" size="100,100">{
 (set: $display_ach to &quot;&quot;)
 &lt;!-- 
 ACHIEVEMENT ENUM
@@ -1023,7 +938,7 @@ Unlocked ((print: $unlocked)/9):&lt;/b&gt;
 (print: $display_ach )
 
 [[Back to menu|Start]]
-</tw-passagedata><tw-passagedata pid="68" name="Ending1" tags="" position="1257,92.5" size="100,100">(if: $ach03 is 0)[ (print: &quot;[Locked]&quot;) ]
+</tw-passagedata><tw-passagedata pid="67" name="Ending1" tags="" position="1257,92.5" size="100,100">(if: $ach03 is 0)[ (print: &quot;[Locked]&quot;) ]
 (else:)[&lt;b&gt;Good Listener&lt;/b&gt;
 
 (display: &quot;goodlistener&quot;) ]
@@ -1031,7 +946,7 @@ Unlocked ((print: $unlocked)/9):&lt;/b&gt;
 1 | [[2|Ending2]] | [[3|Ending3]]
 
 [[Back to menu|Start]]
-</tw-passagedata><tw-passagedata pid="69" name="Ending2" tags="" position="1381,87.5" size="100,100">(if: $ach05 is 0)[ (print: &quot;[Locked]&quot;) ]
+</tw-passagedata><tw-passagedata pid="68" name="Ending2" tags="" position="1381,87.5" size="100,100">(if: $ach05 is 0)[ (print: &quot;[Locked]&quot;) ]
 (else:)[&lt;b&gt;Okay Listener&lt;/b&gt;
 
 (display: &quot;okaylistener&quot;)]
@@ -1039,7 +954,7 @@ Unlocked ((print: $unlocked)/9):&lt;/b&gt;
 [[1|Ending1]] | 2 | [[3|Ending3]]
 
 [[Back to menu|Start]]
-</tw-passagedata><tw-passagedata pid="70" name="Ending3" tags="" position="1508,94.5" size="100,100">(if: $ach04 is 0)[ (print: &quot;[Locked]&quot;) ]
+</tw-passagedata><tw-passagedata pid="69" name="Ending3" tags="" position="1500,85.5" size="100,100">(if: $ach04 is 0)[ (print: &quot;[Locked]&quot;) ]
 (else:)[&lt;b&gt;Bad Listener&lt;/b&gt;
 
 (display: &quot;badlistener&quot;)]
