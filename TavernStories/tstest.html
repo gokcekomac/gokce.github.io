@@ -132,8 +132,6 @@ As the tavernkeeper, you are ready to greet the patrons.
 
 
 [[Back to menu|Start]]
-
-
 </tw-passagedata><tw-passagedata pid="7" name="cus1_1" tags="" position="239,352" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 The first patron of the day appears by the door.
@@ -269,9 +267,7 @@ She continues, ‘At first, it was very difficult to adjust to my new life, a li
 
 [[Next|cus1_8]]
 
-
-
-</tw-passagedata><tw-passagedata pid="18" name="cus1end2" tags="" position="428,1592" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+</tw-passagedata><tw-passagedata pid="18" name="cus1end2" tags="" position="405,1516" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 ‘Good to know. Well, I should get going. But it was really nice to talk to you! So, I’ll see you around then!’ 
 
@@ -290,13 +286,14 @@ When he finally can shake it off, he looks at you straight in the eye and asks, 
 
 You rely on a cliché to cheer him up. ‘Women, eh? Can’t live with them, can’t live without them.’
 
-‘No, no, it’s not like that. She was my &lt;i&gt;best friend&lt;/i&gt;. She &lt;i&gt;is&lt;/i&gt; my best friend. Known her since we were eleven. We played hide-and-seek. And ironically, she &lt;i&gt;always&lt;/i&gt; lost. We kept each other’s secrets. I was there for her in her darkest times and she saved my trouble-making ass way too many times.’ A bittersweet smile appears on his face.
+‘No, no, it’s not like that. She was my &lt;i&gt;best friend&lt;/i&gt;. She &lt;i&gt;is&lt;/i&gt; my best friend. Known her since we were eleven. We climbed trees, went fishing, played hide-and-seek... And ironically, she &lt;i&gt;always&lt;/i&gt; lost. We kept each other’s secrets. I was there for her in her darkest times and she saved my trouble-making ass way too many times.’ A bittersweet smile appears on his face.
 
 [[Next|cus2_3]]
 
 (set: $listen to $listen+1)
 
 </tw-passagedata><tw-passagedata pid="20" name="cus2end3" tags="" position="904,544" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+
 You move away.
 
 He drinks his beer and leaves the tavern quietly.
@@ -322,7 +319,7 @@ He takes a sip.
 
 &lt;script&gt;
 sfx_drink = 1;
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="22" name="cus2end1" tags="" position="770,1364" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="22" name="cus2end1" tags="" position="756,1279" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Yeah, I’ll think about that.’ he says and takes another sip.
 
@@ -335,23 +332,21 @@ He takes the last sip and leaves.
 
 &lt;script&gt;
 sfx_gold = 1;
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="23" name="cus2_6letgo" tags="" position="759,1150" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="23" name="cus2_6letgo" tags="" position="756,1125" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘I’d let it go. It’s too much of a hassle and not worth my time and energy. And besides, if she doesn’t want to be found, I’d respect her decision’ you say.
 
 [[Next|cus2end1]]
 
 
-</tw-passagedata><tw-passagedata pid="24" name="cus2_6look" tags="" position="574,1155" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="24" name="cus2_6look" tags="" position="565,1121" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘I’d wait ‘till I find the right mindset to look for some answers.’ you say.
 
-{
-(set: $problemsolver to 1)
-(if: $guess is &quot;wine&quot; and $magic is &quot;yes&quot;)[
 [[Next|cus2_7]]
-](else:)[ [[Next|cus2end1]] ]
-}</tw-passagedata><tw-passagedata pid="25" name="cus1_6" tags="" position="84,1178" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+{(set: $problemsolver to 1)}
+
+</tw-passagedata><tw-passagedata pid="25" name="cus1_6" tags="" position="84,1178" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 ‘The day he dumped me was the day I resigned from my job. It was the day I was liberated, but at the same time, I was terrified. So terrified! Everything I’ve built my life around was destroyed within a split second... I usually like to plan my steps ahead but... Yeah, whatever. Things just go their own way, I guess.’
 
@@ -398,12 +393,12 @@ She hands you something.
 
 She asks, ‘Do you believe in magic?’
 
-(set: $item to 1)
-[[Yes|cus1_10]] | [[No|cus1_10]]
+{(set: $item to 1)}[[Yes|cus1_10]] | [[No|cus1_10]]
 
+{
 (click: &quot;Yes&quot;)[(set: $magic to &quot;yes&quot;)]
 (click: &quot;No&quot;)[(set: $magic to &quot;no&quot;)]
-</tw-passagedata><tw-passagedata pid="29" name="cus1end1" tags="" position="375,1158.5" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="29" name="cus1end1" tags="" position="375,1158.5" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character3-sari-wine.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer1&quot;&gt;
 
 ‘I should get going. But it was really nice to talk to you! So, I’ll see you around then!’ 
 
@@ -430,7 +425,7 @@ He looks like he needs a sip, but doesn’t take one.
 [[Next|cus2_5]]
 
 
-</tw-passagedata><tw-passagedata pid="31" name="cus2_5" tags="" position="662,982" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="cus2_5" tags="" position="662,981" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 He still looks like he needs a sip, and this time, he takes one.
 
 ‘Not knowing why she ghosted me troubles me more than being ghosted itself. My gut feeling tells me to look for her, or at least look for some answers, but then my stupid pride takes over and holds me back.’
@@ -441,10 +436,11 @@ He takes another sip. A big one.
 
 [[I&#39;d look for answers|cus2_6look]] | [[I&#39;d let it go|cus2_6letgo]]
 
-
+{
 &lt;script&gt;
 sfx_drink = 1;
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="32" name="cus2_7" tags="" position="570,1345" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+&lt;/script&gt;
+}</tw-passagedata><tw-passagedata pid="32" name="cus2_7" tags="" position="549,1295" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek-mug.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Yeah, I’ll think about that.’ he says and takes another sip.
 
@@ -452,18 +448,11 @@ He doesn’t seem to be lost in his thoughts anymore. He takes the last sip.
 
 ‘Do you happen to have a drink for a special occasion? It’s actually her birthday today. That’s why these thoughts had been occupying my mind, although it’s been a good seven years since we last talked. We used to have special drinks on this day… But this time, I want to have something special for myself. For I have found an exit for this maze.’ he says proudly.
 
-‘I can offer you mulled wine. It’s a recent addition to the menu.’
-
-He agrees and moves to a table to enjoy his drink.
-
-{(set: $gold to $gold+$mulledwine)
-(set: $drink to $drink+1)}
-
-[[Next|cus2_8]]
-
-{&lt;script&gt;
-sfx_drink = 1;
-&lt;/script&gt;}</tw-passagedata><tw-passagedata pid="33" name="cus2_9" tags="" position="566,1634" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+{
+(if: $item is 0)[[[Next|cus2end2]] ]
+(else-if: $magic is &quot;no&quot;)[ [[Next|cus2end4]] ]
+(else:)[[[Next|cus2_8]]]
+}</tw-passagedata><tw-passagedata pid="33" name="cus2_10" tags="" position="550,1749" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 He suddenly changes direction and comes towards you.
 
@@ -471,9 +460,9 @@ He suddenly changes direction and comes towards you.
 
 ‘Ask away.’ you say.
 
-[[Next|cus2_10]]
+[[Next|cus2_11]]
 
-</tw-passagedata><tw-passagedata pid="34" name="cus2end2y" tags="" position="816,1629" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="34" name="cus2end5y" tags="" position="809,1745" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 (set: $date to 1)
 ‘Thought you would never ask!’ you say and give him your phone number.
 
@@ -488,7 +477,7 @@ He leaves.
 
 
 
-</tw-passagedata><tw-passagedata pid="35" name="cus2end2n" tags="" position="938,1712" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+</tw-passagedata><tw-passagedata pid="35" name="cus2end5n" tags="" position="857,1861" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘No, I don’t think so. But thanks, I’m flattered!’ you say.
 
@@ -728,8 +717,6 @@ ACHIEVEMENT ENUM
 
 [[Back to menu|Start]]
 
-
-
 </tw-passagedata><tw-passagedata pid="59" name="ach09" tags="" position="2016,1380" size="100,100">&lt;b&gt;Bookworm:&lt;/b&gt; Selected “No, it’s not a game anymore”.</tw-passagedata><tw-passagedata pid="60" name="soundconfig" tags="footer" position="217,41" size="100,100">{
 &lt;!-- MUSIC AND SOUND --!&gt;
 &lt;!-- 
@@ -845,22 +832,22 @@ else if(sfx_magic == 1)
 &lt;script&gt;
 sfx_magic =1;
 &lt;/script&gt;
-]}</tw-passagedata><tw-passagedata pid="62" name="cus2_10" tags="" position="567,1769" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+]}</tw-passagedata><tw-passagedata pid="62" name="cus2_11" tags="" position="556,1876" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
 
 ‘Okay then, I’ll be straightforward. You are kinda my type, and, uh, I was wondering if you’d like to go on a date with me.’
 
-[[Yes|cus2end2y]] | [[No|cus2end2n]]
+[[Yes|cus2end5y]] | [[No|cus2end5n]]
 
 
-</tw-passagedata><tw-passagedata pid="63" name="cus2_8" tags="" position="566,1483" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
+</tw-passagedata><tw-passagedata pid="63" name="cus2_9" tags="" position="558,1615" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Background.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;tavern&quot;&gt;
+
 After finishing his drink, you think he’s about to leave, but...
 
-[[Next|cus2_9]]
+[[Next|cus2_10]]
 
-
-&lt;script&gt;
+{&lt;script&gt;
 sfx_gold = 1;
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="64" name="update_log" tags="" position="571,332" size="100,100">&lt;font size=2 face=&quot;courier&quot;&gt;Tavern Stories v2 Update Log:
+&lt;/script&gt;}</tw-passagedata><tw-passagedata pid="64" name="update_log" tags="" position="571,332" size="100,100">&lt;font size=2 face=&quot;courier&quot;&gt;Tavern Stories v2 Update Log:
 - music bug fixed
 - sound effects added
 - spellchecked and proofread
@@ -962,7 +949,47 @@ Unlocked ((print: $unlocked)/9):&lt;/b&gt;
 [[1|Ending1]] | [[2|Ending2]] | 3
 
 [[Back to menu|Start]]
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="70" name="cus2_8" tags="" position="548,1458" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+
+‘I can offer you mulled wine. It’s a recent addition to the menu.’ you say.
+
+He agrees and moves to a table to enjoy his drink.
+{
+(set: $gold to $gold+$mulledwine)
+(set: $drink to $drink+1)
+}
+[[Next|cus2_9]]
+
+{
+&lt;script&gt;
+sfx_drink = 1;
+&lt;/script&gt;}</tw-passagedata><tw-passagedata pid="71" name="cus2end2" tags="" position="776,1406" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+
+‘No, sorry’ you say. ‘Sometimes I do have some surprise additions to the menu, but I don’t have anything extra at this time.’
+
+‘It’s okay. I still enjoyed my beer very much’ he says and taps his belly. ‘Next time, then!’
+
+He leaves.
+
+[[Next|cus3_1]] 
+
+{&lt;script&gt;
+sfx_gold = 1;
+&lt;/script&gt;}</tw-passagedata><tw-passagedata pid="72" name="cus2end4" tags="" position="780,1520" size="100,100">&lt;img src=&quot;IMG/Tavernstories-Character2-erkek.jpg&quot; width=&quot;512&quot; height=&quot;384&quot; alt=&quot;customer2&quot;&gt;
+
+‘I can offer you mulled wine. It’s a recent addition to the menu.’ you say.
+
+He agrees and moves to a table to enjoy his drink.
+
+After finishing his drink, he leaves.
+
+[[Next|cus3_1]] 
+
+{(set: $gold to $gold+$mulledwine)
+(set: $drink to $drink+1)}
+{&lt;script&gt;
+sfx_gold = 1;
+&lt;/script&gt;}</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,o=!1,i=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(o)throw i}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
